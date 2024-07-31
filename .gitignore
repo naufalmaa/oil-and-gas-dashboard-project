@@ -1,0 +1,12 @@
+src/components/Zara_Assistant/openai_api_key.py
+<<<<<<< HEAD
+*_venv
+*.pyc
+openai_api_key.py
+config.ini
+*.db
+*.db.wal
+=======
+*_venv
+*.pyc
+>>>>>>> c3539ed3b5360adf57107c6e3f28e703c01114ee

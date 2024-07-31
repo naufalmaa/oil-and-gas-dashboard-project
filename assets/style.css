@@ -1,0 +1,663 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #ffff;
+    color: #112D4E;
+}
+
+/* FOR WEB CONTAINER */
+.web-container {
+    width: 100%;
+    /* height: auto; */
+    margin: auto;
+    display: grid;
+    /* gap: 10px; */
+}
+
+/* .navbar, .map-leaflet, .ppd-production-filter, .ppd-main-graphs, .footer-web {
+    border: 3px solid black;
+} */
+
+/* OVERALL WEB-MAPS */
+/* .map-container {
+    padding-left: 10px;
+} */
+
+/* .map-wrapper{
+    padding-left: 10px;
+} */
+
+.data-cell-left{
+    color: #151515;
+}
+
+.data-cell-right{
+    background-color: #ebf2f7;
+    padding-left: 10px;
+}
+
+/* LEFT GRID-SIDE MAP (FILTER MAP) */
+
+.left-side-map {
+    grid-column: 1/3;
+    padding: 50px;
+}
+
+.title-summary-layout h4 {
+    width: 95%;
+    margin-top: 30px;
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.title-block {
+    width: 95%;
+    color: #3F72AF;
+    font-size: 40px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: -3px;
+    padding: 0;
+    font-weight: 700;
+}
+
+.summary-block {
+    width: 95%;
+    padding-top: 10px;
+    line-height: 10px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.map-all-filter .ppd-production-filter {
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+/* RIGHT GRID-SIDE MAP */
+
+/* .map-leaflet {
+    padding-left: 10px;
+} */
+
+/* OVERALL Overview Dashboard */
+.overview-container{
+    padding: 10px;
+}
+.overview-wrapper{
+    padding: 10px;
+}
+
+/* Left-side */
+.overview-accordion-filter{
+    margin: 20px 80px 80px ;
+}
+.overview-filter{
+    padding: 10px;
+    /* margin-right: 20px 80px 80px; */
+}
+.overview-to-date-picker-wrapper{
+    margin-left: 0px;
+}
+
+#from-datepicker-layout-overview, #to-datepicker-layout-overview{
+    display: inline-table;
+}
+
+/* Right-side */
+/* on summary card */
+
+
+.overview-summary-card-group{
+    display: inline-block;
+}
+
+.overview-summary-card-card {
+    height: 100%;
+    width: 100%;
+}
+
+/* .overview-summary-card-text {
+    
+} */
+
+
+
+
+/* Overall Production Performance Dashboard */
+.ppd-container{
+    padding: 10px;
+}
+
+.ppd-wrapper{
+    padding: 10px;
+}
+
+
+/* Production filter left grid-side */
+.ppd-production-filter{
+    padding: 10px;
+    /* margin-right: 20px 80px 80px; */
+}
+
+/* Production main graphs right grid-side graphs */
+.ppd-summary-card-left-grid{
+    padding: 10px;
+    /* margin: 20px 20px 20px 20px; */
+}
+
+.ppd-main-graphs{
+    padding: 10px;
+    /* padding-right: 30px; */
+    /* margin-left: 30px; */
+    /* margin-right: 20px; */
+}
+    /* border: 2px solid #DEE2E6;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+} */
+
+.ppd-first-chart-left-grid{
+    margin: 20px 20px 20px 20px;
+}
+
+.ppd-second-chart-right-grid{
+    margin: 20px 20px 20px 20px;
+}
+
+.ppd-third-chart-right-grid{
+    margin: 20px 20px 20px 20px;
+}
+
+.ppd-fourth-chart-right-grid{
+    margin: 20px 20px 20px 20px;
+}
+
+.ppd-fifth-chart-right-grid{
+    margin: 30px 20px 20px 20px;
+}
+
+#from-datepicker-layout, #to-datepicker-layout{
+    display: inline-table;
+}
+
+.ppd-accordion-filter{
+    margin: 20px 80px 80px ;
+}
+
+.ppd-to-date-picker-wrapper{
+    margin-left: 0px;
+}
+
+.ppd-sc-group-left-grid{
+    display: inline-block;
+}
+
+.ppd-sc-card-left-grid {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+/* Overall GnG Analysis Dashboard */
+.gng-container{
+    padding: 10px;
+}
+
+.gng-wrapper{
+    padding: 10px;
+}
+
+
+/* GnG filter left grid-side */
+
+
+.gng-well-log-accordion-filter{
+    margin: 30px 90px 90px;
+}
+
+.gng-wells-3d-accordion-filter{
+    margin: 30px 90px 90px 90px;
+}
+
+/* GnG main graphs right grid-side */
+
+.gng-graph-title {
+    text-align: center;
+}
+
+.gng-comparison-graphs {
+    padding: 10px;
+}
+
+
+/* chart di overview */
+
+.ovw-avg-production-month-graph {
+    margin-top: 20px;
+}
+
+.ovw-operator-well-counts-pie-chart {
+    margin: 50px;
+}
+
+/* ---------------------------------------------------------------- */
+/* ZARA */
+
+.zara-float-button {
+    margin: 20px;
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    z-index: 101;
+}
+
+/* card chatbot grid */
+
+.parent-card{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* grid-template-rows: 600px 600px; */
+}
+
+.parent-card .zara-card-section {
+    grid-column: 1/12;
+    grid-row: 1/12;
+    /* background-color: #f5f4f4; */
+    width: 61%;
+    border-width: 2px;
+    border-color: #151515;
+    margin-left: 15px;
+    /* margin: 0px 20px 0px 20px; */
+}
+
+.parent-card .zara-card-intro{
+    grid-column: 8/12;
+    grid-row: 1/12;
+    height: 30%;
+    border-width: 2px;
+    border-color: #CED4DA;
+}
+
+.parent-card .zara-card-table{
+    grid-column: 8/12;
+    grid-row: 9/12;
+    height: 32rem;
+    border-width: 2px;
+    border-color: #CED4DA;
+}
+
+/* chat input grid */
+.zara-chat-input {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.zara-chat-input .zara-chat-area {
+    grid-column: 1/12;
+    grid-row: 1/12;
+    width: 93%;
+    margin: 10px 0px 0px 15px;
+    border-width: 2px;
+    border-color: #CED4DA;
+}
+
+.zara-chat-area .mantine-Textarea-wrapper{
+    border-color: #CED4DA;
+}
+
+.zara-chat-input .zara-submit-button {
+    grid-column: 11/12;
+    grid-row: 1/12;
+    margin: 10px 0px 0px 50px;
+}
+
+#zara-submit-button {
+    height: 63px;
+    border-width: 2px;
+    border-color: #CED4DA;
+}
+
+.zara-tab-section{
+
+    width: 90%;
+    height: 60px;
+    margin-top: 10px;
+    overflow-x: scroll;
+    /* Hide the scrollbar */
+    scrollbar-width: 1px;
+}
+
+#zara-segmented-prev .mantine-SegmentedControl-label{
+    /* padding: 5px 20px 5px 20px; */
+    font-family: 'montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+#zara-segmented-prev .mantine-SegmentedControl-labelActive{
+    font-weight: 700;
+    color: #151515;
+    /* font-weight: 600; */
+}
+
+/* #zara-segmented-prev .mantine-SegmentedControl-active{
+} */
+
+
+.zara-response-section{
+    height: 700px;
+    width: 100%;
+    margin-bottom: 10px;
+    overflow: auto;
+    overflow-x: auto;
+    /* background: #f5f4f4; */
+}
+
+/* scrollbar */
+.full-chatbot-layout-zara::-webkit-scrollbar{
+    width: 15px;
+}
+
+.full-chatbot-layout-zara::-webkit-scrollbar-track{
+    /* background: #F5F4F4; */
+}
+
+.full-chatbot-layout-zara::-webkit-scrollbar-thumb{
+    /* background: #F5F4F4; */
+    border: 2px solid #C1C1C1;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+/* response chatbot */
+
+.grid-profile{
+    padding: 20px;
+}
+
+.grid-chat{
+    max-width: 600px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.grid-chat-for-table{
+    padding: 20px 0px 20px 0px;
+    max-width: 600px;
+}
+
+.chat-full-div{
+    border-bottom: 1px solid #C1C1C1;
+}
+
+.chat-item {
+    border: 1px solid rgb(206, 212, 218);
+    border-radius: 10px;
+    /* padding: 20px; */
+    margin: 10px 10px 10px 10px ;
+    /* display: flex;
+    justify-content: space-between; */
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.question {
+    padding: 25px;
+    color: black;
+    margin-right: 30px; /* Add 5px margin to the right of the question */
+}
+
+.answer {
+    padding: 40px;
+    border: 1px solid #96c5fc;
+    color: grey;
+    margin-left: 30px; /* Add 5px margin to the left of the answer */
+    overflow-x: auto;
+}
+
+/* for scroll table */
+
+.grid-chat-for-table{
+    overflow: auto;
+    overflow-y: hidden;
+}
+
+.grid-chat-for-table::-webkit-scrollbar{
+    height: 15px;
+}
+
+.grid-chat-for-table::-webkit-scrollbar-track{
+    background: #F5F4F4;
+}
+
+.grid-chat-for-table::-webkit-scrollbar-thumb{
+    background: #F5F4F4;
+    border: 2px solid #C1C1C1;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.zara-profile-grid{
+    margin-top: 5px;
+}
+
+
+
+
+
+/* @media (min-width: 768px) {
+
+    .web-container {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 70px 1900px 1400px 200px 400px 2630px 500px 800px 100px;
+    }
+
+    .web-container .navbar {
+        grid-column: 1/13;
+    }
+
+    .web-container .map-container {
+        grid-column: 1/13;
+    }
+
+    .web-container .left-side-map {
+        grid-column: 1/13;
+    }
+
+    .web-container .map-leaflet {
+        grid-column: 1/13;
+    }
+
+    .web-container .ppd-tabs {
+        grid-column: 1/13;
+    }
+
+    .web-container .ppd-production-filter {
+        grid-column: 1/13;
+    }
+
+    .web-container .ppd-main-graphs {
+        grid-column: 1/13;
+    }
+
+    .web-container .wl-main-graphs {
+        grid-column: 1/13;
+    }
+
+    .web-container .wl-main-filter {
+        grid-column: 1/13;
+    }
+
+    .web-container .footer-web {
+        grid-column: 1/13;
+    }
+
+    .ppd-to-date-picker-wrapper{
+        margin-left: 0px;
+    }
+
+}
+
+*/
+
+
+@media (min-width: 1080px) {
+
+    .web-container {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .web-container .navbar {
+        grid-column: 1/13;
+    }
+
+    /* basic webmaps */
+    .web-container .map-container {
+        grid-column: 1/13;
+    }
+
+    .web-container .map-container .map-wrapper {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: auto;
+    }
+
+    /* left grid-side map*/
+    .web-container .map-container .map-wrapper .left-side-map {
+        grid-column: 1/4;
+        overflow: auto;
+        max-height: 1000px;
+    }
+
+    /* right grid-side map*/
+    .web-container .map-container .map-wrapper .map-leaflet {
+        grid-column: 4/9;
+    }
+
+    /* tabs */
+    .web-container .main-tabs {
+        grid-column: 1/13;
+        margin: 80px 50px 20px 50px;
+    }
+
+    .web-container .main-tabs .main-tablist {
+        grid-column: 1/13;
+    }
+
+    /* overview dashboards */
+    .web-container .overview-wrapper{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+    }
+
+    /* left grid-side of production performance dashboard */
+    .web-container .overview-wrapper .overview-filter{
+        grid-column: 1/5;
+    }
+
+    /* right grid-side of production performance dashboard*/
+    .web-container .overview-wrapper .overview-main-content{
+        grid-column: 5/13;
+        margin-top: 20px;
+    }
+
+
+    /* production performance dashboard */
+    /* .web-container .main-tabs .main-tablist .ppd-container{
+        grid-column: 1/13;
+    } */
+
+    .web-container .ppd-wrapper{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+    }
+
+    /* left grid-side of production performance dashboard */
+    .web-container .ppd-wrapper .ppd-production-filter{
+        grid-column: 1/5;
+    }
+
+    /* right grid-side of production performance dashboard*/
+    .web-container .ppd-wrapper .ppd-main-graphs{
+        grid-column: 5/13;
+    }
+
+    /* gng analysis dashboard */
+    /* left grid-side of gng analysis dashboard */
+    
+    .web-container .gng-wrapper{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+    }
+
+    /* left grid-side of gng analysis dashboard */
+    .web-container .gng-wrapper .gng-main-filter{
+        grid-column: 1/5;
+    }
+
+    /* right grid-side of gng analysis dashboard*/
+    .web-container .gng-wrapper .gng-main-graphs{
+        grid-column: 5/13;
+    }
+
+    /* .web-container .gng-wrapper .gng-comparison-graph{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+    } */
+
+    .web-container .gng-wrapper .gng-comparison-graph .gng-lith-3d-graph{
+        grid-column: 3/7;
+    }
+
+    .web-container .gng-wrapper .gng-comparison-graph .gng-wells-3d-graph{
+        grid-column: 7/11;
+    }
+
+
+
+    .web-container .footer-web {
+        grid-column: 1/13;
+    }
+
+}
+
+/* Mantine styles API */
+
+.mantine-Spoiler-control{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.dash-debug-menu__outer, .dash-debug-menu {
+    display: none !important;
+}
