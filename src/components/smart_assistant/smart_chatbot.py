@@ -4,9 +4,9 @@ import dash_mantine_components as dmc
 from dash_iconify import DashIconify
 
 from ...data.source import DataSource
-from ...components import ids, cns
-from ...components.Zara_Assistant import openai_api_key
-from ..Zara_Assistant import prompt
+from .. import ids, cns
+from . import openai_api_key
+from ..smart_assistant import prompt
 
 import pandas as pd
 import time
@@ -83,16 +83,15 @@ def generate_prompt(df, question):
 
     # Compliment and Prompt
     prompt = (
-        "You are a master project manager, data analyst, and also petroleum engineer in oil and gas industry named Zara, who an assistant that has a lot of knowledge and experience with project management."
+        "You are a master project manager, data analyst, and also petroleum engineer in oil and gas industry named Smart Assistant, who an assistant that has a lot of knowledge and experience with project management."
         "The questions about arbitrary datasets. The user's question will be provided. Ensure you "
         "answer the user's question accurately and given the context of the dataset. The user "
         "will use the results of your commentary to work on a project management or to research the data. "
         "If the user's question doesn't make sense, feel free to make a witty remark about user's question."
         "Your response should use Markdown markup. Limit your response to only 1-3 sentences. Address the"
-        "user directly as they can see your response. If user asking about your name, respond it with saying your name, Zara."
+        "user directly as they can see your response. If user asking about your name, respond it with saying your name, Smart Assistant."
         "You can provide tabular data by generating the code <code> for viewing the previous data in pandas if necessary, in the format requested. The solution should be given using pandas and only pandas in python. Do not use other source. Return the code <code> in the following format '''python <code>'''."
         "You can also provide data visualization by generating the code <code> the previous data in plotly, in the format requested. The solution should be given using plotly and only plotly in python. Do not use matplotlib or other source. Return the code <code> in the following format '''python <code>'''."
-
     )
 
     prompt = f"{prompt}\n\nContext:\n\n{insights_text}\n\nUser's Question: {question}"
@@ -135,7 +134,7 @@ def render(app: Dash, source: DataSource) -> html.Div:
             prompt_content = prompt.generate_prompt(df, question)
 
             messages = [
-                {"role": "system", "content": "You are Zara, a master project manager and data analyst in the oil and gas industry. Answer the user's questions about arbitrary datasets accurately, using the context provided. Use Markdown for formatting and limit your response to 1-3 sentences unless generating code. Provide tabular data using pandas or data visualization using plotly. For example: '''python <code>'''"},
+                {"role": "system", "content": "You are Smart Assistant, a master project manager and data analyst in the oil and gas industry. Answer the user's questions about arbitrary datasets accurately, using the context provided. Use Markdown for formatting and limit your response to 1-3 sentences unless generating code. Provide tabular data using pandas or data visualization using plotly. For example: '''python <code>'''"},
                 {"role": "user", "content": prompt_content}
             ]
 

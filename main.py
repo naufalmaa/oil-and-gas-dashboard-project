@@ -30,7 +30,7 @@ def main() -> None:
     app.layout = create_layout(app, data)
 
     app.run_server(
-        debug=False, 
+        debug=True, 
         port = 7500)
 
 if __name__ == '__main__':

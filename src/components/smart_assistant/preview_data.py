@@ -38,7 +38,7 @@ def render(app: Dash, source: DataSource) -> html.Div:
                                 "filter": True,
                             },
                             dashGridOptions={"pagination": False},
-                            style={'height':'400px'}
+                            style={'height':'200px'},
                             
                         )
                     ]

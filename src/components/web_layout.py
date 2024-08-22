@@ -54,8 +54,8 @@ from .gng_analysis import (
     
 )
 
-from .Zara_Assistant import (
-    zara_layout
+from .smart_assistant import (
+    smart_assitant_chat_layout
 )
 
 from .web_maps.data_color_map import colormap
@@ -114,7 +114,7 @@ def create_layout(app: Dash, source: DataSource) -> html.Div:
             html.Div(
                 className=cns.ZARA_FLOAT_BUTTON,
                 children=[
-                    zara_layout.create_layout(app,source)
+                    smart_assitant_chat_layout.create_layout(app,source)
                 ]
             ),
             

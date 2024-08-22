@@ -6,11 +6,11 @@ from src.components import ids, cns
 
 from ...data.source import DataSource
 
-from ..Zara_Assistant import Zara_Drawer
+from . import smart_assitant_drawer
 
 def create_layout(app: Dash, source: DataSource) -> html.Div:
     return html.Div(
         children=[
-            Zara_Drawer.render(app, source)
+            smart_assitant_drawer.render(app, source)
         ]
     )

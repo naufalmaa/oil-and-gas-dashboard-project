@@ -289,7 +289,7 @@ body {
 .parent-card .zara-card-intro{
     grid-column: 8/12;
     grid-row: 1/12;
-    height: 30%;
+    height: 50%;
     border-width: 2px;
     border-color: #CED4DA;
 }
@@ -297,24 +297,57 @@ body {
 .parent-card .zara-card-table{
     grid-column: 8/12;
     grid-row: 9/12;
-    height: 32rem;
+    height: 350px;
     border-width: 2px;
     border-color: #CED4DA;
 }
 
+/* .zara-card-table{
+    height: 350px;
+} */
+
+/* bottom box */
 /* chat input grid */
+/* .bottom-box {
+
+} */
+.api-warning-card {
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    width: 700px;
+    padding: 15px;
+    /* background-color: white; */
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.card-settings {
+    margin-top: 10px;
+    border-width: 2px;
+    border-color: #CED4DA;
+}
+
 .zara-chat-input {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+}
+
+.checkbox-chat {
+    margin-top: 5px;
 }
 
 .zara-chat-input .zara-chat-area {
     grid-column: 1/12;
     grid-row: 1/12;
     width: 93%;
-    margin: 10px 0px 0px 15px;
+    margin: 20px 0px 0px 15px;
     border-width: 2px;
     border-color: #CED4DA;
+}
+
+.zara-chat-input {
+    width: 93%;
 }
 
 .zara-chat-area .mantine-Textarea-wrapper{
@@ -324,11 +357,13 @@ body {
 .zara-chat-input .zara-submit-button {
     grid-column: 11/12;
     grid-row: 1/12;
-    margin: 10px 0px 0px 50px;
+    margin: 20px 0px 0px 50px;
 }
 
 #zara-submit-button {
     height: 63px;
+    margin-right: 5px;
+    margin-left: 15px;
     border-width: 2px;
     border-color: #CED4DA;
 }

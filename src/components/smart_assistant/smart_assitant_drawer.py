@@ -2,10 +2,13 @@ from dash import Dash, html, Input, Output, callback
 import dash_mantine_components as dmc
 from dash_iconify import DashIconify
 
-from ...data.source import DataSource
-from ...components import ids, cns
+from . import smart_assistant_tab, smart_assitant_clear_button, smart_chatbot_v2
 
-from ..Zara_Assistant import Zara_Chatbot_v2, zara_tab, preview_data, zara_clear_button
+from ...data.source import DataSource
+from .. import ids, cns
+
+from ..smart_assistant import preview_data
+from . import setting
 
 
 def render(app: Dash, source: DataSource) -> html.Div:
@@ -20,7 +23,7 @@ def render(app: Dash, source: DataSource) -> html.Div:
     return html.Div(
         children=[
             dmc.Button(
-                "Ask Zara",
+                "Ask Smart Assistant",
                 className=cns.ZARA_FLOAT_BUTTON,
                 id=ids.ZARA_FLOAT_BUTTON,
                 variant="gradient",
@@ -60,7 +63,7 @@ def render(app: Dash, source: DataSource) -> html.Div:
                                     html.Div(
                                         children=[
                                             dmc.Text(
-                                                "Welcome to Zara!",
+                                                "Welcome to Smart Assistant!",
                                                 style={
                                                     "fontWeight": "600",
                                                     "fontSize": "30px",
@@ -69,8 +72,15 @@ def render(app: Dash, source: DataSource) -> html.Div:
                                             dmc.Text(
                                                 "An assistant for you to build a quick data analysis without querying your data"
                                             ),
-                                            html.Div(zara_tab.render(app, source)),
+                                            dmc.Card(
+                                                className="card-settings",
+                                                withBorder=True,
+                                                shadow="0px",
+                                                radius="lg",
+                                                children=[setting.settings_layout()],
+                                            ),
                                             # html.Div(zara_clear_button.render(app, source))
+                                            
                                         ]
                                     )
                                 ],
@@ -80,11 +90,13 @@ def render(app: Dash, source: DataSource) -> html.Div:
                                 withBorder=True,
                                 shadow="0px",
                                 radius="lg",
-                                children=[preview_data.render(app, source)],
+                                children=[
+                                    html.Div(smart_assistant_tab.render(app, source)),
+                                    preview_data.render(app, source)],
                             ),
                         ],
                     ),
-                    Zara_Chatbot_v2.render(app, source),
+                    smart_chatbot_v2.render(app, source),
                 ],
             ),
         ]

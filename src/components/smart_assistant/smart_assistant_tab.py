@@ -4,7 +4,7 @@ from dash_iconify import DashIconify
 
 from ...data.source import DataSource
 from ...data.loader import ProductionDataSchema
-from ...components import ids, cns
+from .. import ids, cns
 
 
 def render(app: Dash, source: DataSource) -> html.Div:
